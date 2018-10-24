@@ -1,6 +1,6 @@
 # vue-test
 
-> A Vue.js project  版本持续更新中...
+> A Vue.js project
 
 ## Build Setup
 
