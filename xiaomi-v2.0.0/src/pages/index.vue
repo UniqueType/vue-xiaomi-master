@@ -41,7 +41,7 @@ export default {
   },
   mounted() {
     this.$ajax.run('queryGoodsInfo', {}, r => {
-        console.log('queryGoodsInfo==='+ r);
+        // console.log('queryGoodsInfo==='+ r);
     })
   }
 }
