@@ -1,0 +1,22 @@
+[{
+	"bannerType": "0",
+	"url": "http://i8.mifile.cn/v1/a1/64837c60-1ec4-c71a-f6d2-9026845713fd!720x360.webp",
+	"desc": "购物商品1"
+},{
+	"bannerType": "0",
+	"url": "http://i8.mifile.cn/v1/a1/c197e53b-d531-e6a5-84ec-8de9e2fba3f3!720x360.webp",
+	"desc": "购物商品2"
+},{
+	"bannerType": "0",
+	"url": "http://i8.mifile.cn/v1/a1/5faa4415-42f6-3f02-6554-7dce6ffa5302!720x360.webp",
+	"desc": "购物商品3"
+},
+{
+	"bannerType": "1",
+	"url": "http://i8.mifile.cn/v1/a1/37e975e2-1079-5e31-9bc4-dbffce66dbf1!720x440.webp",
+	"desc": "购物商品3"
+},{
+	"bannerType": "1",
+	"url": "http://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/9d1c91e19d7dc68d3e812c9a8c4af9c7.jpg?thumb=1&w=720&h=440",
+	"desc": "购物商品3"
+}]

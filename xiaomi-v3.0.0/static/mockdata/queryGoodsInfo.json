@@ -1,0 +1,15 @@
+{
+ "new": [
+    {"id":1,"imgUrl":"","price":"1599","productName":"小米5","desc":"小米5小米5小米5","discountPrice":"1299"},
+    {"id":2,"imgUrl":"","price":"1599","productName":"小米6","desc":"小米6小米6小米6","discountPrice":"1299"},
+    {"id":3,"imgUrl":"","price":"1599","productName":"小米7","desc":"小米7小米7小米7","discountPrice":"1299"},
+    {"id":4,"imgUrl":"","price":"1599","productName":"小米8","desc":"小米8小米8小米8","discountPrice":"1299"},
+ ],
+ "mobile":[
+  {"id":1,"imgUrl":"","price":"1599","productName":"小米5","desc":"小米5小米5小米5","discountPrice":"1299"},
+  {"id":2,"imgUrl":"","price":"1599","productName":"小米6","desc":"小米6小米6小米6","discountPrice":"1299"},
+  {"id":3,"imgUrl":"","price":"1599","productName":"小米7","desc":"小米7小米7小米7","discountPrice":"1299"},
+  {"id":4,"imgUrl":"","price":"1599","productName":"小米8","desc":"小米8小米8小米8","discountPrice":"1299"},
+ ],
+ "tv": [],
+}

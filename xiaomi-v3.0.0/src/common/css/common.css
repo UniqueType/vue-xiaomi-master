@@ -1,0 +1,77 @@
+hr{
+	border: none;
+	border-bottom: 5px solid #eee;
+}
+.clear{
+	clear: both;
+}
+.linethrough{
+	text-decoration: line-through;
+}
+.color_f60{
+	color: #f60;
+	text-decoration: blink;
+}
+.color_999{
+	color: #999;
+}
+.color_eee{
+	color: #eee;
+}
+
+.f_s_20{
+	font-size: 20px;
+}
+
+.f_s_14{
+	font-size: 14px;
+}
+.f_s_12{
+	font-size: 12px;
+}
+.marintop60{
+	margin-top: 60px;
+}
+.marintop50{
+	margin-top: 50px;
+}
+
+.marginright20 {
+	margin-right: 20px;
+}
+.marginbtm20{
+	margin-bottom: 20px;
+}
+
+.text_center{
+	text-align: center;
+}
+.fontweight{
+	font-weight: bold;
+}
+.border_bottom_1 {
+	border-bottom: 1px solid #eee;
+}
+/* 典型单行布局 */
+.arrow-row {
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.arrow-right {
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+.arrow-right .icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    background: url('../../../static/assets/arrow.png') no-repeat;
+    background-size: cover;
+    transform: rotate(-90deg);
+}
