@@ -1,16 +1,19 @@
 <template>
     <div id="index">
-        <tabBar @tabBarChange='tabBarChange' />
+        <TabBar @tabBarChange='tabBarChange' />
         <div class="pagebox">
-            <Home v-if='currentPage=="home"' />
-            <Category v-else-if='currentPage=="category"' />
-            <Cart v-else-if='currentPage=="cart"' />
-            <Mine v-else />
+            <!-- v-if  v-else-if v-else 与 v-show 同样出现短暂空白 -->
+            <transition-group :name="transitionName">
+                <Home v-show='currentPage=="home"' :key='"home"' />
+                <Category v-show='currentPage=="category"' :key='"category"' />
+                <Cart v-show='currentPage=="cart"' :key='"cart"' />
+                <Mine v-show='currentPage=="mine"' :key='"mine"' />
+            </transition-group>
         </div>
     </div>
 </template>
 <script>
-import tabBar from '../components/tabBar'
+import TabBar from '../components/tabBar'
 import Home from './home'
 import Category from './category'
 import Cart from './cart'
@@ -19,7 +22,7 @@ import Mine from './mine'
 export default {
     name: 'Index',
     components: {
-        tabBar,
+        TabBar,
         Home,
         Category,
         Cart,
@@ -27,7 +30,9 @@ export default {
     },
     data() {
         return {
-            currentPage: 'home'
+            currentPage: 'home',
+            transitionName: 'pre',
+            preTabIndex: 0
         }
     },
     created() {
@@ -39,8 +44,14 @@ export default {
         }
     },
     methods: {
-        tabBarChange(page) {
-            this.currentPage = page;
+        tabBarChange(params) {
+            this.currentPage = params.pageName;
+            if (this.preTabIndex >= params.index) {
+                this.transitionName = 'next'
+            } else {
+                this.transitionName = 'pre'
+            }
+            this.preTabIndex = params.index;
         }
     },
     mounted() {
@@ -63,5 +74,58 @@ export default {
     left: 0;
     top: 0;
 }
+
+.next-enter-active {
+    animation-name: next-in;
+    animation-duration: .5s;
+}
+
+.next-leave-active{
+    animation-name: next-out;
+    animation-duration: .5s;
+}
+.pre-enter-active {
+    animation-name: pre-in;
+    animation-duration: .5s;
+}
+
+.pre-leave-active{
+    animation-name: pre-out;
+    animation-duration: .5s;
+}
+@keyframes pre-in {
+  0% {
+    transform: translate(100%, 0)
+  }
+  100% {
+    transform: translate(0, 0)
+  }
+}
+@keyframes pre-out {
+  0% {
+    transform: translate(0, 0)
+  }
+  100% {
+    transform: translate(-100%, 0)
+  }
+}
+
+@keyframes next-in {
+  0% {
+    transform: translate(-100%, 0)
+  }
+  100% {
+    transform: translate(0, 0)
+  }
+}
+@keyframes next-out {
+  0% {
+    transform: translate(0, 0)
+  }
+  100% {
+    transform: translate(100%, 0)
+  }
+}
+
 
 </style>

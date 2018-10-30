@@ -1,7 +1,7 @@
 <template>
   <div id="tabbar" class="tabbar">
     <ul class="tabbar-ul">
-    	<li v-for='item in tabbar' @click='tabBarClick(item)'>
+    	<li v-for='(item,index) in tabbar' @click='tabBarClick(item,index)'>
     		<div>
     			<img :src="item.active?item.activedIcon:item.icon" alt="">
     		</div>
@@ -47,12 +47,12 @@ export default {
   	console.log('【tabBar.vue】');
   },
   methods: {
-  	tabBarClick(item) {
+  	tabBarClick(item,index) {
   		for(let i=0;i<this.tabbar.length;i++){
   			this.tabbar[i].active = false;
   		}
   		item.active = true;
-  		this.$emit('tabBarChange', item.pageName);
+  		this.$emit('tabBarChange', { pageName:item.pageName, index });
   	}
   }
   // props: {
