@@ -47,13 +47,16 @@ export default {
   	console.log('【tabBar.vue】');
   },
   methods: {
-  	tabBarClick(item,index) {
+  	tabBarClick(item, index) {
   		for(let i=0;i<this.tabbar.length;i++){
   			this.tabbar[i].active = false;
   		}
   		item.active = true;
   		this.$emit('tabBarChange', { pageName:item.pageName, index });
-  	}
+  	},
+    setCurTab(params) { // 来自父组件的触发
+      this.tabBarClick(this.tabbar[params.index], params.index);
+    }
   }
   // props: {
   //   tabbar: {

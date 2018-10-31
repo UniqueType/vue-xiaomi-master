@@ -56,9 +56,9 @@ export default {
         },
         goToPage(name) {
             if (name === 'home') {
-                window.location.reload();
+                // window.location.reload();
                 // window.history.forward(-1);
-                // this.$emit('setCurPage', name);
+                this.$emit('setCurPage', { pageName: 'home', index: 0 });
             } else {
                 this.$router.push(name)
             }

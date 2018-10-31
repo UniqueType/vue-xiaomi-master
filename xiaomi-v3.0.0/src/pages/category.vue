@@ -1,7 +1,7 @@
 <template>
     <div id="category" class="category">
-        <div class="marintop50"></div>
         <TopTitle :titleBarParams='titleBarParams' />
+        <div class="marintop50"></div>
         <div class="category-content">
             <div class="category-left">
                 <PortraitNav class='PortraitNav' @PortraitNavBarChange='PortraitNavBarChange' />

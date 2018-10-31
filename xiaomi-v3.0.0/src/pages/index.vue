@@ -1,12 +1,12 @@
 <template>
     <div id="index">
-        <TabBar @tabBarChange='tabBarChange' />
+        <TabBar ref='tabbar' @tabBarChange='tabBarChange' />
         <div class="pagebox">
             <!-- v-if  v-else-if v-else 与 v-show 同样出现短暂空白 -->
             <transition-group :name="transitionName">
                 <Home v-show='currentPage=="home"' :key='"home"' />
                 <Category v-show='currentPage=="category"' :key='"category"' />
-                <Cart v-show='currentPage=="cart"' :key='"cart"' />
+                <Cart v-show='currentPage=="cart"' :key='"cart"' @setCurPage='setCurPage' />
                 <Mine v-show='currentPage=="mine"' :key='"mine"' />
             </transition-group>
         </div>
@@ -45,6 +45,7 @@ export default {
     },
     methods: {
         tabBarChange(params) {
+            console.log(params);
             this.currentPage = params.pageName;
             if (this.preTabIndex >= params.index) {
                 this.transitionName = 'next'
@@ -52,6 +53,10 @@ export default {
                 this.transitionName = 'pre'
             }
             this.preTabIndex = params.index;
+        },
+        setCurPage(params) { // 来自子组件的触发
+            this.tabBarChange(params); // 切换当前页面
+            this.$refs.tabbar.setCurTab(params); // 触发子组件tabbar激活状态
         }
     },
     mounted() {

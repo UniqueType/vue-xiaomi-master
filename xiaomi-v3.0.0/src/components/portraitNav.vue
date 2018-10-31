@@ -100,7 +100,15 @@ export default {
 .portraitNav {
 	width: 100%;
 	font-size: 14px;
-  overflow: scroll;
+}
+.portraitNav-box{
+  height: auto;
+  overflow-y: scroll;
+}
+/* 去除滚动条的小方块 不需看到具体滑到哪个位置 */
+.portraitNav-box::-webkit-scrollbar{
+  width: 0;
+  background: transparent;
 }
 
 .portraitNav-box span{

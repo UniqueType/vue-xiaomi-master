@@ -101,7 +101,6 @@ export default {
 	white-space: nowrap;
 	padding: 0 20px;
   border-bottom: 2px solid #eee;
-
 }
 /* 去除滚动条的小方块 不需看到具体滑到哪个位置 */
 .cart-box::-webkit-scrollbar{

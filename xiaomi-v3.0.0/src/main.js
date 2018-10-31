@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router/index'
 import { Http } from './utils'
+import 'mint-ui/lib/style.css'
 
 Vue.config.productionTip = false
 
